@@ -17,7 +17,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
 
-LOCAL_SRC_FILES := $(call all-java-files-under, src ../java-overridable/src)
+LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
 LOCAL_PACKAGE_NAME := LatinIME
 
@@ -26,10 +26,10 @@ LOCAL_CERTIFICATE := shared
 LOCAL_JNI_SHARED_LIBRARIES := libjni_latinime
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
-        android-common inputmethod-common jsr305 latinime-common
+        android-common jsr305 latinime-common
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
-        android-support-v4
+        androidx.legacy_legacy-support-v4
 
 LOCAL_USE_AAPT2 := true
 
